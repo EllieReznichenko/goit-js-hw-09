@@ -94,3 +94,15 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionPosition: 'bottom',
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.gallery');
+
+  container.innerHTML = createGalleryMarkup(images);
+
+  const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+    captionPosition: 'bottom',
+  });
+});
